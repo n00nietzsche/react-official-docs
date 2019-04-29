@@ -1,0 +1,49 @@
+# 들어가기 전에
+
+- 이 포스팅은 https://reactjs.org/docs/hello-world.html 에 있는 포스팅을 번역한 것입니다. 오역이나 의역이 있을 수 있습니다. 지적해주시면 확인 후 바로 정정하겠습니다.
+
+- original source of this posting is from https://reactjs.org/docs/hello-world.html If the original author requests deletion, it will be deleted immediately.
+
+- Translated by Jake Seo (서진규)
+
+	- https://velog.io/@jakeseo_me
+	- https://github.com/n00nietzsche
+    
+> 리액트 공식문서로 배워보자 #1, Hello World!
+
+# Hello World
+
+가장 간단한 리액트 코드는 다음과 같이 생겼습니다.
+
+```js
+ReactDOM.render(
+  <h1>Hello, world!</h1>
+  document.getElementById('root')
+);
+```
+
+위 코드는 "Hello, world!"를 페이지에 보여줍니다.
+
+**[CodePen에서 직접 해보기](https://codepen.io/pen?&editable=true&editors=0010)**
+
+위의 링크를 클릭해서 온라인 에디터를 열어보세요. 무엇이든 맘편히 바꿔보고, 출력에 어떻게 영향을 미치는지 살펴보세요. 이 가이드의 대부분의 페이지들은 이처럼 수정 가능한 예제를 갖고 있습니다.
+
+## 가이드 읽는 방법
+
+이번 가이드에서, 엘리먼트와 컴포넌트라고 불리는 리액트 앱을 구성하는 블록들을 살펴볼 것입니다. 이것들을 마스터하면 작은 재사용 가능한 조각들로 복잡한 앱을 만들 수 있습니다.
+
+> **팁**
+> 이 가이드는 개념을 순서대로 배우는 것을 선호하는 사람들을 위해 디자인되었습니다. 무언가 실제로 하면서 배우길 원한다면 [실전 튜토리얼](https://velog.io/@jakeseo_me/%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EB%B2%88%EC%97%AD)을 확인해보세요. 이 가이드와 실전 튜토리얼이 서로 상호보완적이라는 것을 알아낼 수도 있습니다.
+
+리액트 메인 개념들을 순서대로 진행하는 가이드에서 여기는 첫번째 챕터입니다. 네비게이션 사이드 바에서 모든 챕터의 리스트를 볼 수 있습니다. 모바일 기계에서 이 내용을 읽고 계신다면, 오른쪽 아래에 있는 버튼을 이용해 네비게이션 바를 볼 수 있습니다.
+
+이 가이드에서 모든 챕터는 이전 챕터에서 소개된 지식을 기반으로 합니다. **사이드 바에 위치한 "메인 개념" 가이드 챕터들을 읽음으로써 리액트의 대부분을 배울 수 있습니다.** 예를 들면, "JSX 소개"는 이 다음 챕터입니다.
+
+## 지식 수준 가정
+
+리액트는 자바스크립트 라이브러리입니다. 여러분이 자바스크립트 언어의 기본적인 이해가 있다고 가정할 것입니다. **자신이 없다고 느끼신다면, [자바스크립트 튜토리얼](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)을 확인하고 자신의 지식 수준을 체크해보세요.** 그리고 이 가이드를 잘 따라올 수 있는 기반을 만들어보세요. 30분에서 1시간정도 걸릴 수 있지만, 리액트와 자바스크립트를 동시에 배우고 있다는 느낌이 들게 하진 않을 것입니다.
+
+> **알아둬야 할 것**
+> 이 가이드는 종종 예제에서 새로운 자바스크립트 문법을 사용합니다. 지난 몇년간 자바스크립트를 사용해본적이 없다면, [이 세가지 핵심 문법](https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c)은 당신의 이해에 큰 도움이 될 것입니다.
+
+## 이제 시작해봅시다!
